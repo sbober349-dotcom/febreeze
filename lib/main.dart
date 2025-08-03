@@ -19,7 +19,7 @@ final List<Map<String, dynamic>> apps = [
   {"name": "Settings", "icon": "settings.png", "exec": isProduction ? ["chromium", "--kiosk","--touch-events=enabled", "chrome://settings"] : ["notepad.exe"]},
   {"name": "Maps", "icon": "maps.png", "exec": isProduction ? ["chromium", "--kiosk","--touch-events=enabled", "https://maps.google.com"] : ["notepad.exe"]},
   {"name": "Mail", "icon": "mail.png", "exec": isProduction ? ["chromium", "--kiosk", "--touch-events=enabled", "https://mail.google.com"] : ["notepad.exe"]},
-  {"name": "Browser", "icon": "browser.png", "exec": isProduction ? ["chromium", "--kiosk", "--touch-events=enabled"] : ["notepad.exe"]},
+  {"name": "Browser", "icon": "browser.png", "exec": isProduction ? ["chromium", "--touch-events=enabled"] : ["notepad.exe"]},
 ];
 
 // Dock apps
@@ -27,7 +27,7 @@ final List<Map<String, dynamic>> dockApps = [
   {"name": "Phone", "icon": "phone.png", "exec": isProduction ? ["chromium", "--kiosk","--touch-events=enabled","https://web.telegram.org"] : ["notepad.exe"]},
   {"name": "Messages", "icon": "messages.png", "exec": isProduction ? ["chromium", "--kiosk","--touch-events=enabled", "https://web.whatsapp.com"] : ["notepad.exe"]},
   {"name": "Camera", "icon": "camera.png", "exec": isProduction ? ["pkill", "Xorg"] : ["notepad.exe"]},
-  {"name": "Browser", "icon": "browser.png", "exec": isProduction ? ["chromium", "--kiosk", "--touch-events=enabled", "https://google.com"] : ["notepad.exe"]},
+  {"name": "Browser", "icon": "browser.png", "exec": isProduction ? ["chromium", "--touch-events=enabled", "https://google.com"] : ["notepad.exe"]},
 ];
 
 void log(String msg) {
@@ -295,8 +295,8 @@ class _PhoneHomeScreenState extends State<PhoneHomeScreen> with TickerProviderSt
 
     // Initialize dimensions based on testing mode
     if (testingMode) {
-      screenWidth = 960;
-      screenHeight = 640;
+      screenWidth = 640;
+      screenHeight = 960;
       timeFontSize = 100;
       dateFontSize = 25;
       pillWidth = 200;
@@ -952,4 +952,5 @@ void main() {
   );
 
 }
+
 
