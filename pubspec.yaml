@@ -1,0 +1,23 @@
+name: phone_home_screen
+description: Phone Home Screen Simulation
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/
+    - assets/fonts/
+    - assets/icons/
+    - assets/wallpapers/
+  
+  fonts:
+    - family: SFProDisplay
+      fonts:
+        - asset: assets/fonts/SFPRODISPLAYBOLD.OTF
