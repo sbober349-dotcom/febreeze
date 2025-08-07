@@ -302,7 +302,7 @@ class _PhoneHomeScreenState extends State<PhoneHomeScreen> with TickerProviderSt
       pillWidth = 200;
       pillHeight = 6;
       pillBottom = 30;
-      swipeThreshold = 200;
+      swipeThreshold = 400;
       clockTopPadding = 150;
       iconSize = 70;
       iconFontSize = 12;
@@ -952,5 +952,6 @@ void main() {
   );
 
 }
+
 
 
